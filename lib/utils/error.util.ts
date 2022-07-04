@@ -6,23 +6,23 @@ export class ErrorUtil {
 
 		switch (err.code) {
 			case ErrorCode.EMAIL_ALREADY_EXISTS:
-				return ErrorMessage.EMAIL_UNAVAILABLE;
+				return new Error(ErrorMessage.EMAIL_UNAVAILABLE);
 			case ErrorCode.INSUFFICIENT_PERMISSIONS:
-				return ErrorMessage.UNAUTHORIZED;
+				return new Error(ErrorMessage.UNAUTHORIZED);
 			case ErrorCode.INVALID_EMAIL:
-				return ErrorMessage.INVALID_EMAIL;
+				return new Error(ErrorMessage.INVALID_EMAIL);
 			case ErrorCode.INVALID_PHONE_NUMBER:
-				return ErrorMessage.INVALID_PHONE_NUMBER;
+				return new Error(ErrorMessage.INVALID_PHONE_NUMBER);
 			case ErrorCode.PHONE_NUMBER_ALREADY_EXISTS:
-				return ErrorMessage.PHONE_NUMBER_UNAVAILABLE;
+				return new Error(ErrorMessage.PHONE_NUMBER_UNAVAILABLE);
 			case ErrorCode.USER_NOT_FOUND:
-				return ErrorMessage.USER_NOT_FOUND;
+				return new Error(ErrorMessage.USER_NOT_FOUND);
 			case ErrorCode.USER_DISABLED:
-				return ErrorMessage.USER_DISABLED;
+				return new Error(ErrorMessage.USER_DISABLED);
 			case ErrorCode.SESSION_HAS_EXPIRED:
-				return ErrorMessage.SESSION_EXPIRED;
+				return new Error(ErrorMessage.SESSION_EXPIRED);
 			default:
-				return ErrorMessage.DEFAULT;
+				return new Error(ErrorMessage.DEFAULT);
 		}
 	}
 }
