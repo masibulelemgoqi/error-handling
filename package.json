@@ -1,6 +1,6 @@
 {
-	"name": "error-handling",
-	"version": "0.1.0",
+	"name": "somecode-error-handling",
+	"version": "0.1.1",
 	"description": "Error handling plugin",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",

@@ -2,9 +2,9 @@ import { ErrorCode, ErrorMessage } from '../enums';
 
 export class ErrorUtil {
 	static of(e: unknown) {
-		let err: Error = e as Error;
+		let err = e as any;
 
-		switch (err.name) {
+		switch (err.code) {
 			case ErrorCode.EMAIL_ALREADY_EXISTS:
 				return ErrorMessage.EMAIL_UNAVAILABLE;
 			case ErrorCode.INSUFFICIENT_PERMISSIONS:
