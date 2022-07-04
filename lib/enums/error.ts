@@ -10,6 +10,7 @@ export enum ErrorCode {
 	INSUFFICIENT_PERMISSIONS = 'auth/insufficient-permission',
 	INVALID_ARGUMENT = 'auth/invalid-argument',
 	WRONG_PASSWORD = 'auth/wrong-password',
+	TOO_MANY_REQUESTS = 'auth/too-many-requests',
 }
 
 export enum ErrorMessage {
@@ -28,4 +29,5 @@ export enum ErrorMessage {
 	UNAUTHORIZED = 'Unauthorized',
 	INVALID_ARGUMENT = 'Invalid data provided',
 	WRONG_CREDENTIALS = 'Wrong email/password',
+	TOO_MANY_REQUESTS = 'You have made too many request, wait a little before trying again',
 }

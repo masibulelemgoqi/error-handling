@@ -22,6 +22,8 @@ export class ErrorUtil {
 				return ErrorMessage.SESSION_EXPIRED;
 			case ErrorCode.WRONG_PASSWORD:
 				return ErrorMessage.WRONG_CREDENTIALS;
+			case ErrorCode.TOO_MANY_REQUESTS:
+				return ErrorMessage.TOO_MANY_REQUESTS;
 			default:
 				return ErrorMessage.DEFAULT;
 		}
