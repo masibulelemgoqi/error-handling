@@ -12,6 +12,8 @@ var ErrorCode;
     ErrorCode["INVALID_PHONE_NUMBER"] = "auth/invalid-phone-number";
     ErrorCode["INVALID_EMAIL"] = "auth/invalid-email";
     ErrorCode["INSUFFICIENT_PERMISSIONS"] = "auth/insufficient-permission";
+    ErrorCode["INVALID_ARGUMENT"] = "auth/invalid-argument";
+    ErrorCode["WRONG_PASSWORD"] = "auth/wrong-password";
 })(ErrorCode = exports.ErrorCode || (exports.ErrorCode = {}));
 var ErrorMessage;
 (function (ErrorMessage) {
@@ -27,4 +29,6 @@ var ErrorMessage;
     ErrorMessage["SESSION_EXPIRED"] = "Session has expired";
     ErrorMessage["USER_DISABLED"] = "Account not accessible at the moment, Please contact your admin...";
     ErrorMessage["UNAUTHORIZED"] = "Unauthorized";
+    ErrorMessage["INVALID_ARGUMENT"] = "Invalid data provided";
+    ErrorMessage["WRONG_CREDENTIALS"] = "Wrong email/password";
 })(ErrorMessage = exports.ErrorMessage || (exports.ErrorMessage = {}));

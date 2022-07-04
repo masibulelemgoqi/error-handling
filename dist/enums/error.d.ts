@@ -7,7 +7,9 @@ export declare enum ErrorCode {
     USER_DISABLED = "auth/user-disabled",
     INVALID_PHONE_NUMBER = "auth/invalid-phone-number",
     INVALID_EMAIL = "auth/invalid-email",
-    INSUFFICIENT_PERMISSIONS = "auth/insufficient-permission"
+    INSUFFICIENT_PERMISSIONS = "auth/insufficient-permission",
+    INVALID_ARGUMENT = "auth/invalid-argument",
+    WRONG_PASSWORD = "auth/wrong-password"
 }
 export declare enum ErrorMessage {
     DEFAULT = "Something went wrong, please try again later.",
@@ -20,5 +22,7 @@ export declare enum ErrorMessage {
     PHONE_NUMBER_UNAVAILABLE = "Phone number is not available",
     SESSION_EXPIRED = "Session has expired",
     USER_DISABLED = "Account not accessible at the moment, Please contact your admin...",
-    UNAUTHORIZED = "Unauthorized"
+    UNAUTHORIZED = "Unauthorized",
+    INVALID_ARGUMENT = "Invalid data provided",
+    WRONG_CREDENTIALS = "Wrong email/password"
 }

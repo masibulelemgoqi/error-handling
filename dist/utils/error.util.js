@@ -5,7 +5,7 @@ const enums_1 = require("../enums");
 class ErrorUtil {
     static of(e) {
         let err = e;
-        switch (err.name) {
+        switch (err.code) {
             case enums_1.ErrorCode.EMAIL_ALREADY_EXISTS:
                 return enums_1.ErrorMessage.EMAIL_UNAVAILABLE;
             case enums_1.ErrorCode.INSUFFICIENT_PERMISSIONS:
@@ -22,9 +22,14 @@ class ErrorUtil {
                 return enums_1.ErrorMessage.USER_DISABLED;
             case enums_1.ErrorCode.SESSION_HAS_EXPIRED:
                 return enums_1.ErrorMessage.SESSION_EXPIRED;
+            case enums_1.ErrorCode.WRONG_PASSWORD:
+                return enums_1.ErrorMessage.WRONG_CREDENTIALS;
             default:
                 return enums_1.ErrorMessage.DEFAULT;
         }
+    }
+    static throwError(e) {
+        throw new Error(ErrorUtil.of(e));
     }
 }
 exports.ErrorUtil = ErrorUtil;

@@ -8,6 +8,8 @@ export enum ErrorCode {
 	INVALID_PHONE_NUMBER = 'auth/invalid-phone-number',
 	INVALID_EMAIL = 'auth/invalid-email',
 	INSUFFICIENT_PERMISSIONS = 'auth/insufficient-permission',
+	INVALID_ARGUMENT = 'auth/invalid-argument',
+	WRONG_PASSWORD = 'auth/wrong-password',
 }
 
 export enum ErrorMessage {
@@ -24,4 +26,6 @@ export enum ErrorMessage {
 	SESSION_EXPIRED = 'Session has expired',
 	USER_DISABLED = 'Account not accessible at the moment, Please contact your admin...',
 	UNAUTHORIZED = 'Unauthorized',
+	INVALID_ARGUMENT = 'Invalid data provided',
+	WRONG_CREDENTIALS = 'Wrong email/password',
 }
