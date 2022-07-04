@@ -1,0 +1,24 @@
+{
+	"name": "error-handling",
+	"version": "0.1.0",
+	"description": "Error handling plugin",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/uhtomeek/error-handling.git"
+	},
+	"author": "Masibulele Mgoqi",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/uhtomeek/error-handling/issues"
+	},
+	"homepage": "https://github.com/uhtomeek/error-handling#readme",
+	"devDependencies": {
+		"typescript": "^4.7.4"
+	}
+}
