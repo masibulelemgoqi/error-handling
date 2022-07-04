@@ -9,7 +9,8 @@ export declare enum ErrorCode {
     INVALID_EMAIL = "auth/invalid-email",
     INSUFFICIENT_PERMISSIONS = "auth/insufficient-permission",
     INVALID_ARGUMENT = "auth/invalid-argument",
-    WRONG_PASSWORD = "auth/wrong-password"
+    WRONG_PASSWORD = "auth/wrong-password",
+    TOO_MANY_REQUESTS = "auth/too-many-requests"
 }
 export declare enum ErrorMessage {
     DEFAULT = "Something went wrong, please try again later.",
@@ -24,5 +25,6 @@ export declare enum ErrorMessage {
     USER_DISABLED = "Account not accessible at the moment, Please contact your admin...",
     UNAUTHORIZED = "Unauthorized",
     INVALID_ARGUMENT = "Invalid data provided",
-    WRONG_CREDENTIALS = "Wrong email/password"
+    WRONG_CREDENTIALS = "Wrong email/password",
+    TOO_MANY_REQUESTS = "You have made too many request, wait a little before trying again"
 }

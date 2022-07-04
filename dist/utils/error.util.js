@@ -24,6 +24,8 @@ class ErrorUtil {
                 return enums_1.ErrorMessage.SESSION_EXPIRED;
             case enums_1.ErrorCode.WRONG_PASSWORD:
                 return enums_1.ErrorMessage.WRONG_CREDENTIALS;
+            case enums_1.ErrorCode.TOO_MANY_REQUESTS:
+                return enums_1.ErrorMessage.TOO_MANY_REQUESTS;
             default:
                 return enums_1.ErrorMessage.DEFAULT;
         }

@@ -14,6 +14,7 @@ var ErrorCode;
     ErrorCode["INSUFFICIENT_PERMISSIONS"] = "auth/insufficient-permission";
     ErrorCode["INVALID_ARGUMENT"] = "auth/invalid-argument";
     ErrorCode["WRONG_PASSWORD"] = "auth/wrong-password";
+    ErrorCode["TOO_MANY_REQUESTS"] = "auth/too-many-requests";
 })(ErrorCode = exports.ErrorCode || (exports.ErrorCode = {}));
 var ErrorMessage;
 (function (ErrorMessage) {
@@ -31,4 +32,5 @@ var ErrorMessage;
     ErrorMessage["UNAUTHORIZED"] = "Unauthorized";
     ErrorMessage["INVALID_ARGUMENT"] = "Invalid data provided";
     ErrorMessage["WRONG_CREDENTIALS"] = "Wrong email/password";
+    ErrorMessage["TOO_MANY_REQUESTS"] = "You have made too many request, wait a little before trying again";
 })(ErrorMessage = exports.ErrorMessage || (exports.ErrorMessage = {}));
