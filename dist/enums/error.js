@@ -4,6 +4,7 @@ exports.ErrorMessage = exports.ErrorCode = void 0;
 var ErrorCode;
 (function (ErrorCode) {
     ErrorCode["EMAIL_ALREADY_EXISTS"] = "auth/email-already-exists";
+    ErrorCode["EMAIL_ALREADY_IN_USE"] = "auth/email-already-in-use";
     ErrorCode["PHONE_NUMBER_ALREADY_EXISTS"] = "auth/phone-number-already-exists";
     ErrorCode["USER_NOT_FOUND"] = "auth/user-not-found";
     ErrorCode["SESSION_HAS_EXPIRED"] = "auth/session-cookie-expired";

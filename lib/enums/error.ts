@@ -1,5 +1,6 @@
 export enum ErrorCode {
 	EMAIL_ALREADY_EXISTS = 'auth/email-already-exists',
+	EMAIL_ALREADY_IN_USE = 'auth/email-already-in-use',
 	PHONE_NUMBER_ALREADY_EXISTS = 'auth/phone-number-already-exists',
 	USER_NOT_FOUND = 'auth/user-not-found',
 	SESSION_HAS_EXPIRED = 'auth/session-cookie-expired',

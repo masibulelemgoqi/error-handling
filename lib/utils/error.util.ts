@@ -5,6 +5,7 @@ export class ErrorUtil {
 		let err = e as any;
 		switch (err.code) {
 			case ErrorCode.EMAIL_ALREADY_EXISTS:
+			case ErrorCode.EMAIL_ALREADY_IN_USE:
 				return ErrorMessage.EMAIL_UNAVAILABLE;
 			case ErrorCode.INSUFFICIENT_PERMISSIONS:
 				return ErrorMessage.UNAUTHORIZED;

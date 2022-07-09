@@ -7,6 +7,7 @@ class ErrorUtil {
         let err = e;
         switch (err.code) {
             case enums_1.ErrorCode.EMAIL_ALREADY_EXISTS:
+            case enums_1.ErrorCode.EMAIL_ALREADY_IN_USE:
                 return enums_1.ErrorMessage.EMAIL_UNAVAILABLE;
             case enums_1.ErrorCode.INSUFFICIENT_PERMISSIONS:
                 return enums_1.ErrorMessage.UNAUTHORIZED;
