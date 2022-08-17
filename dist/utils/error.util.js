@@ -28,7 +28,7 @@ class ErrorUtil {
             case enums_1.ErrorCode.TOO_MANY_REQUESTS:
                 return enums_1.ErrorMessage.TOO_MANY_REQUESTS;
             default:
-                return err.message;
+                return enums_1.ErrorMessage.DEFAULT;
         }
     }
     static throwError(e) {
