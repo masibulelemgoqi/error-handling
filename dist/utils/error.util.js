@@ -28,11 +28,17 @@ class ErrorUtil {
             case enums_1.ErrorCode.TOO_MANY_REQUESTS:
                 return enums_1.ErrorMessage.TOO_MANY_REQUESTS;
             default:
-                return enums_1.ErrorMessage.DEFAULT;
+                return err.message;
         }
     }
     static throwError(e) {
-        throw new Error(ErrorUtil.of(e));
+        let error = e;
+        if (error.message.includes('/')) {
+            throw new Error(ErrorUtil.of(e));
+        }
+        else {
+            throw new Error(error.message);
+        }
     }
 }
 exports.ErrorUtil = ErrorUtil;
