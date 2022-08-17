@@ -30,7 +30,7 @@ export class ErrorUtil {
 		}
 	}
 
-	static throwError(e: unknown) {
+	static throwError(e: any) {
 		let error = e as Error;
 		if (error.message.includes('/')) {
 			throw new Error(ErrorUtil.of(e));
