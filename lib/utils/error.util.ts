@@ -26,7 +26,7 @@ export class ErrorUtil {
 			case ErrorCode.TOO_MANY_REQUESTS:
 				return ErrorMessage.TOO_MANY_REQUESTS;
 			default:
-				return ErrorMessage.DEFAULT;
+				return err.message;
 		}
 	}
 
