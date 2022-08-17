@@ -33,9 +33,9 @@ export class ErrorUtil {
 	static throwError(e: unknown) {
 		let error = e as Error;
 		if (error.message.includes('/')) {
-			throw new Error(error.message);
-		} else {
 			throw new Error(ErrorUtil.of(e));
+		} else {
+			throw new Error(error.message);
 		}
 	}
 }
