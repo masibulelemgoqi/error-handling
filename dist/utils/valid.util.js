@@ -5,6 +5,9 @@ const enums_1 = require("../enums");
 class ValidUtil {
     static email(email) {
         try {
+            if (!email) {
+                throw new Error(enums_1.ErrorMessage.INVALID_EMAIL);
+            }
             email = email.trim();
             const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
             if (!re.test(email)) {
@@ -17,6 +20,9 @@ class ValidUtil {
     }
     static fullName(name) {
         try {
+            if (!name) {
+                throw new Error(enums_1.ErrorMessage.INVALID_NAME);
+            }
             name = name.trim();
             if (!name || name.length < 3 || name.split(' ').length < 2) {
                 throw new Error(enums_1.ErrorMessage.INVALID_NAME);
@@ -35,6 +41,9 @@ class ValidUtil {
     }
     static phoneNumber(phoneNumber) {
         try {
+            if (!phoneNumber) {
+                throw new Error(enums_1.ErrorMessage.INVALID_PHONE_NUMBER);
+            }
             phoneNumber = phoneNumber.trim();
             const re = /^\d{10}$/;
             if (!re.test(phoneNumber)) {
@@ -47,6 +56,9 @@ class ValidUtil {
     }
     static password(password) {
         try {
+            if (!password) {
+                throw new Error(enums_1.ErrorMessage.INVALID_PASSWORD);
+            }
             password = password.trim();
             if (!password || password.length < 6) {
                 throw new Error(enums_1.ErrorMessage.INVALID_PASSWORD);
