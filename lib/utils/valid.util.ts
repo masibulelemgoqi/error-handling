@@ -1,7 +1,10 @@
 import { ErrorMessage } from '../enums';
 export class ValidUtil {
-	static email(email: string) {
+	static email(email?: string) {
 		try {
+			if (!email) {
+				throw new Error(ErrorMessage.INVALID_EMAIL);
+			}
 			email = email.trim();
 			const re =
 				/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -13,8 +16,11 @@ export class ValidUtil {
 		}
 	}
 
-	static fullName(name: string) {
+	static fullName(name?: string) {
 		try {
+			if (!name) {
+				throw new Error(ErrorMessage.INVALID_NAME);
+			}
 			name = name.trim();
 			if (!name || name.length < 3 || name.split(' ').length < 2) {
 				throw new Error(ErrorMessage.INVALID_NAME);
@@ -30,8 +36,11 @@ export class ValidUtil {
 		}
 	}
 
-	static phoneNumber(phoneNumber: string) {
+	static phoneNumber(phoneNumber?: string) {
 		try {
+			if (!phoneNumber) {
+				throw new Error(ErrorMessage.INVALID_PHONE_NUMBER);
+			}
 			phoneNumber = phoneNumber.trim();
 			const re = /^\d{10}$/;
 			if (!re.test(phoneNumber)) {
@@ -42,8 +51,11 @@ export class ValidUtil {
 		}
 	}
 
-	static password(password: string) {
+	static password(password?: string) {
 		try {
+			if (!password) {
+				throw new Error(ErrorMessage.INVALID_PASSWORD);
+			}
 			password = password.trim();
 			if (!password || password.length < 6) {
 				throw new Error(ErrorMessage.INVALID_PASSWORD);
